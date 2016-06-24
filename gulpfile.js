@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const utool = require('./src/utool');
-const fs = require('fs');
+const package = require('./package.json');
 
 gulp.task('default', () => {
   utool.debug('default gulp task');
@@ -16,14 +16,8 @@ gulp.task('patch', () => {
   // console.log(pack);
 
   // read package.json file
-  fs.readFile('package.json', (err, data) => {
-    // parse json data
-    jPackage = JSON.parse(data);
-    // save 'version' key value
-    currV = jPackage.version;
-    console.log(currV);
-
-  });
+  const currV = package.version;
+  console.log(currV);
 
 
 });
