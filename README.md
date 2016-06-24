@@ -8,6 +8,10 @@ npm install uTool
 ```
 
 ##Usage
+create logs folder, and log file
+`logs/elog.log`
+
+require tool in file and use `debug()`
 ```javascript
 const utool = require('uTool');
 utool.debug('output statement', obj);
