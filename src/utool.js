@@ -25,7 +25,6 @@ exports.patch = (tag) => {
   const semver = require('semver');
 
   const newPatch = semver.inc(tag, 'patch');
-  console.log(newPatch);
   return newPatch;
 
 };
