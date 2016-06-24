@@ -25,6 +25,27 @@ exports.patch = (tag) => {
   const semver = require('semver');
 
   const newPatch = semver.inc(tag, 'patch');
+
   return newPatch;
+
+};
+
+// MINOR version bumping
+exports.minor = (tag) => {
+  const semver = require('semver');
+
+  const newMinor = semver.inc(tag, 'minor');
+
+  return newMinor;
+
+};
+
+// MINOR version bumping
+exports.major = (tag) => {
+  const semver = require('semver');
+
+  const newMajor = semver.inc(tag, 'major');
+
+  return newMajor;
 
 };
