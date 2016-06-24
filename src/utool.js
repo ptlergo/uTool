@@ -1,7 +1,6 @@
 exports.debug = (title, obj) => {
   const colors = require('colors');
   const fs = require('fs');
-  const semver = require('semver');
   const seperator = '\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n';
   const time = new Date();
   colors.setTheme({
@@ -19,4 +18,14 @@ exports.debug = (title, obj) => {
     });
     console.log(output);
   }
+};
+
+// PATCH version bumping
+exports.patch = (tag) => {
+  const semver = require('semver');
+
+  const newPatch = semver.inc(tag, 'patch');
+  console.log(newPatch);
+  return newPatch;
+
 };

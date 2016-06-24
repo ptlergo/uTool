@@ -6,6 +6,9 @@ gulp.task('default', () => {
 });
 
 gulp.task('patch', () => {
-  console.log('PATCH gulp task');
-  utool.debug('ddddddddd');
+
+  // // grab package.json file
+  // gulp.src('./package.json');
+  utool.patch('1.1.1');
+
 });
