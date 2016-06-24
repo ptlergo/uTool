@@ -1,6 +1,7 @@
 exports.debug = (title, obj) => {
   const colors = require('colors');
   const fs = require('fs');
+  const semver = require('semver');
   const seperator = '\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n';
   const time = new Date();
   colors.setTheme({
