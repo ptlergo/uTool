@@ -6,3 +6,15 @@
 ```
 npm install uTool
 ```
+
+##Usage
+```javascript
+const utool = require('uTool');
+utool.debug('output statement', obj);
+```
+
+##Run
+Turn debug mode on to run tool
+```
+DEBUG=true node location-of-server-file
+```
