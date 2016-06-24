@@ -14,8 +14,16 @@ gulp.task('patch', () => {
   // const newtag = utool.patch(tag);
   // // const parsed = JSON.parse(pack);
   // console.log(pack);
+
+  // read package.json file
   fs.readFile('package.json', (err, data) => {
-    console.log(JSON.parse(data));
+    // parse json data
+    jPackage = JSON.parse(data);
+    // save 'version' key value
+    currV = jPackage.version;
+    console.log(currV);
+
   });
+
 
 });
