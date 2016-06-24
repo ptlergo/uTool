@@ -14,7 +14,7 @@ gulp.task('patch', () => {
   console.log(currV);
   currV = utool.patch(currV);
   console.log(currV);
-
+  let t = '1.2.1';
 
 });
 

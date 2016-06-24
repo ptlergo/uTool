@@ -24,9 +24,9 @@ exports.debug = (title, obj) => {
 exports.patch = (tag) => {
   const semver = require('semver');
 
-  const newPatch = semver.inc(tag, 'patch');
+  let newPatch = semver.inc(tag, 'patch');
 
-  return newPatch;
+  return '\nPATCH BUMP: ' + tag + ' ---> ' + newPatch + '\n';
 
 };
 
@@ -36,7 +36,7 @@ exports.minor = (tag) => {
 
   const newMinor = semver.inc(tag, 'minor');
 
-  return newMinor;
+  return '\MINOR BUMP: ' + tag + ' ---> ' + newMinor + '\n';
 
 };
 
@@ -46,6 +46,6 @@ exports.major = (tag) => {
 
   const newMajor = semver.inc(tag, 'major');
 
-  return newMajor;
+  return '\nMAJOR BUMP: ' + tag + ' ---> ' + newMajor + '\n';
 
 };
