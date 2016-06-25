@@ -30,14 +30,15 @@ exports.bump = (currv, tag) => {
 
   if (tag === 'major'){
     let newPatch = semver.inc(cuurv, tag);
-    return '\nPATCH BUMP: ' + tag + ' ---> ' + newPatch + '\n';
+    return '\nPATCH BUMP: ' + cuurv + ' ---> ' + newPatch + '\n';
 
   }else if (tag === 'minor'){
     let newPatch = semver.inc(cuurv, tag);
-
+    return '\nPATCH BUMP: ' + currv + ' ---> ' + newPatch + '\n';
 
   }else if ( tag === 'patch'){
     let newPatch = semver.inc(cuurv, tag);
+    return '\nPATCH BUMP: ' + currv + ' ---> ' + newPatch + '\n';
 
   }else {
     return 'error! wrong tag!';
