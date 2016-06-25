@@ -42,4 +42,5 @@ exports.bump = (currv, tag) => {
 
   }else {
     return 'error! wrong tag!';
-  }
+  };
+};
