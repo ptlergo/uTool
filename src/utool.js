@@ -28,13 +28,17 @@ exports.debug = (title, obj) => {
 exports.bump = (currv, tag) => {
   const semver = require('semver');
 
-  let newPatch = semver.inc(cuurv, tag);
-
   if (tag === 'major'){
+    let newPatch = semver.inc(cuurv, tag);
+    return '\nPATCH BUMP: ' + tag + ' ---> ' + newPatch + '\n';
 
   }else if (tag === 'minor'){
+    let newPatch = semver.inc(cuurv, tag);
 
-  }else{
 
-  };
-  
+  }else if ( tag === 'patch'){
+    let newPatch = semver.inc(cuurv, tag);
+
+  }else {
+    return 'error! wrong tag!';
+  }
