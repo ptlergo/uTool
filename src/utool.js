@@ -20,11 +20,12 @@ exports.debug = (title, obj) => {
   }
 };
 
-/***
-** version bumping
-** currv parameter is the current version number
-** tag is the strings ['major', 'minor', 'patch']
-*/
+/**
+ * @function VERSION BUMP
+ * @param {String} currv: current version number
+ * @param {String} tag: 'major', 'minor', 'patch' keywords
+ * @return {Element} element
+ */
 exports.bump = (currv, tag) => {
   const semver = require('semver');
 
