@@ -36,28 +36,5 @@ exports.bump = (currv, tag) => {
 
   }else{
 
-  }
-
-  return '\nPATCH BUMP: ' + tag + ' ---> ' + newPatch + '\n';
-
-};
-
-// MINOR version bumping
-exports.minor = (tag) => {
-  const semver = require('semver');
-
-  const newMinor = semver.inc(currv, tag);
-
-  return '\MINOR BUMP: ' + tag + ' ---> ' + newMinor + '\n';
-
-};
-
-// MINOR version bumping
-exports.major = (tag) => {
-  const semver = require('semver');
-  // only accept tag = 'major'
-  const newMajor = semver.inc(currv, tag);
-
-  return '\nMAJOR BUMP: ' + tag + ' ---> ' + newMajor + '\n';
-
-};
+  };
+  
