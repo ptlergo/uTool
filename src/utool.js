@@ -29,15 +29,15 @@ exports.bump = (currv, tag) => {
   const semver = require('semver');
 
   if (tag === 'major'){
-    let newPatch = semver.inc(cuurv, tag);
-    return '\nPATCH BUMP: ' + cuurv + ' ---> ' + newPatch + '\n';
+    let newPatch = semver.inc(currv, tag);
+    return '\nPATCH BUMP: ' + currv + ' ---> ' + newPatch + '\n';
 
   }else if (tag === 'minor'){
-    let newPatch = semver.inc(cuurv, tag);
+    let newPatch = semver.inc(currv, tag);
     return '\nPATCH BUMP: ' + currv + ' ---> ' + newPatch + '\n';
 
   }else if ( tag === 'patch'){
-    let newPatch = semver.inc(cuurv, tag);
+    let newPatch = semver.inc(currv, tag);
     return '\nPATCH BUMP: ' + currv + ' ---> ' + newPatch + '\n';
 
   }else {
