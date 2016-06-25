@@ -20,11 +20,23 @@ exports.debug = (title, obj) => {
   }
 };
 
-// PATCH version bumping
+/***
+** version bumping
+** currv parameter is the current version number
+** tag is the strings ['major', 'minor', 'patch']
+*/
 exports.bump = (currv, tag) => {
   const semver = require('semver');
 
   let newPatch = semver.inc(cuurv, tag);
+
+  if (tag === 'major'){
+
+  }else if (tag === 'minor'){
+
+  }else{
+
+  }
 
   return '\nPATCH BUMP: ' + tag + ' ---> ' + newPatch + '\n';
 
